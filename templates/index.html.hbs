@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SCP: Secret Facility - Многопользовательская игра ужасов, основанная на вселенной SCP Foundation. Исследуйте тайны, сражайтесь с аномалиями и выживайте вместе с другими игроками.">
+    <title>SCP: Secret Facility - Многопользовательская игра ужасов</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="/static/img/favicon.svg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">
+                    <i class="fas fa-radiation"></i> SCP: <span>Secret Facility</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#about">О игре</a></li>
+                        <li><a href="#gameplay">Игровой процесс</a></li>
+                        <li><a href="#classes">Классы</a></li>
+                        <li><a href="#media">Медиа</a></li>
+                        <li><a href="#download" class="btn btn-download"><i class="fas fa-download btn-icon"></i>Скачать</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="particle particle-1"><i class="fas fa-biohazard"></i></div>
+            <div class="particle particle-2"><i class="fas fa-virus"></i></div>
+            <div class="particle particle-3"><i class="fas fa-radiation"></i></div>
+            <div class="particle particle-4"><i class="fas fa-flask"></i></div>
+            <div class="animated-grid">
+                <div class="grid-line horizontal"></div>
+                <div class="grid-line horizontal"></div>
+                <div class="grid-line horizontal"></div>
+                <div class="grid-line vertical"></div>
+                <div class="grid-line vertical"></div>
+                <div class="grid-line vertical"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-shield-alt"></i>Высший уровень допуска</div>
+                <h2>Добро пожаловать в мир <span class="text-gradient">аномалий и ужаса</span></h2>
+                <p>SCP: Secret Facility - это многопользовательская игра ужасов, где вам предстоит исследовать тайны фонда SCP, сражаться с опасными аномалиями и выживать вместе с другими игроками в атмосфере постоянного напряжения.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#download" class="btn btn-primary"><i class="fas fa-download btn-icon"></i>Скачать игру</a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-secondary"><i class="fas fa-play-circle btn-icon"></i>Смотреть трейлер</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Активных игроков</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label">SCP объектов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Положительных отзывов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="container">
+            <h2 class="section-title">О игре</h2>
+            <div class="about">
+                <div class="container">
+                    <div class="about-container">
+                        <div class="about-content">
+                            <h3>Погрузитесь в мир SCP</h3>
+                            <p>"SCP: Secret Facility" - это захватывающая многопользовательская хоррор-игра, основанная на знаменитой игре SCP: Secret Laboratory. Игроки погружаются в мрачные глубины секретной организации, где им предстоит взять на себя роль ученых, объектов SCP или сотрудников класса D, пытающихся сбежать из комплекса.</p>
+                            <p>В мрачных лабиринтоподобных коридорах комплекса игрокам предстоит сотрудничать и использовать свои индивидуальные способности и навыки для достижения своих целей.</p>
+                            <div class="about-features">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="feature-text">Командная игра</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-ghost"></i>
+                                    </div>
+                                    <div class="feature-text">Хоррор-атмосфера</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-dice"></i>
+                                    </div>
+                                    <div class="feature-text">Случайная генерация</div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-microphone"></i>
+                                    </div>
+                                    <div class="feature-text">Голосовой чат</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-visual">
+                            <div class="visual-content">
+                                <div class="visual-circle circle-1"></div>
+                                <div class="visual-circle circle-2"></div>
+                                <div class="visual-circle circle-3"></div>
+                                <div class="scp-logo">SCP</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gameplay" class="container">
+            <h2 class="section-title">Игровой процесс</h2>
+            <div class="gameplay">
+                <div class="gameplay-video">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle video-icon"></i>
+                        <div class="video-overlay">Трейлер игрового процесса</div>
+                    </div>
+                </div>
+                <div class="gameplay-features">
+                    <div class="gameplay-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Выживание</h3>
+                            <p>Используйте все доступные средства и навыки для выживания в опасной среде комплекса SCP.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gameplay-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Командная работа</h3>
+                            <p>Объединяйтесь с другими игроками для достижения общих целей или предавайте их для своей выгоды.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gameplay-feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-door-closed"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Исследование</h3>
+                            <p>Исследуйте процедурно-генерируемый комплекс, открывайте новые зоны и находите скрытые секреты.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="classes" class="container">
+            <h2 class="section-title">Классы</h2>
+            <div class="classes-container">
+                <div class="class-tabs">
+                    <div class="class-tab active" data-class="human">Люди</div>
+                    <div class="class-tab" data-class="scp">SCP объекты</div>
+                    <div class="class-tab" data-class="mtf">Оперативники</div>
+                </div>
+                
+                <div class="class-info active" id="human-info">
+                    <div class="class-header">
+                        <div class="class-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3>Персонал комплекса</h3>
+                    </div>
+                    <div class="class-description">
+                        <p>Играйте за различных сотрудников комплекса, включая ученых, техников и обслуживающий персонал. Каждый класс имеет уникальные способности и доступ к различным зонам комплекса.</p>
+                        <p>Ваша основная цель - выжить и сбежать из объекта. Для этого вам потребуется сотрудничать с другими игроками, использовать знания о SCP-объектах и избегать опасностей.</p>
+                    </div>
+                    <div class="class-abilities">
+                        <div class="ability">
+                            <i class="fas fa-key"></i>
+                            <span>Доступ к закрытым зонам</span>
+                        </div>
+                        <div class="ability">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Знание SCP-объектов</span>
+                        </div>
+                        <div class="ability">
+                            <i class="fas fa-first-aid"></i>
+                            <span>Медицинские навыки</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="class-info" id="scp-info">
+                    <div class="class-header">
+                        <div class="class-icon"><i class="fas fa-biohazard"></i></div>
+                        <h3>SCP объекты</h3>
+                    </div>
+                    <div class="class-description">
+                        <p>Играйте за различные аномалии и SCP-объекты, каждый со своими уникальными и смертельными способностями. Ваша цель - сеять хаос, охотиться на людей и предотвратить побег из комплекса.</p>
+                        <p>Каждый SCP-объект имеет собственный стиль игры, от быстрой атаки до скрытности и манипуляции. Изучите их способности и станьте настоящим кошмаром для персонала комплекса.</p>
+                    </div>
+                    <div class="class-abilities">
+                        <div class="ability">
+                            <i class="fas fa-skull"></i>
+                            <span>Сверхъестественные способности</span>
+                        </div>
+                        <div class="ability">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Повышенная прочность</span>
+                        </div>
+                        <div class="ability">
+                            <i class="fas fa-ghost"></i>
+                            <span>Особые формы перемещения</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="class-info" id="mtf-info">
+                    <div class="class-header">
+                        <div class="class-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Мобильные оперативные группы</h3>
+                    </div>
+                    <div class="class-description">
+                        <p>Элитные силы реагирования Фонда SCP, специально обученные для противодействия аномальным угрозам. Ваша миссия - восстановить порядок в комплексе, эвакуировать персонал и нейтрализовать SCP-объекты.</p>
+                        <p>Оперативники МОГ вооружены передовым оружием и оборудованием, имеют высокий уровень доступа ко всем зонам комплекса и подготовлены к боям с самыми опасными сущностями.</p>
+                    </div>
+                    <div class="class-abilities">
+                        <div class="ability">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Тактическая экипировка</span>
+                        </div>
+                        <div class="ability">
+                            <i class="fas fa-crosshairs"></i>
+                            <span>Продвинутое вооружение</span>
+                        </div>
+                        <div class="ability">
+                            <i class="fas fa-headset"></i>
+                            <span>Тактическая координация</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="media" class="container">
+            <h2 class="section-title">Медиа</h2>
+            <div class="media-tabs">
+                <div class="media-tab active" data-tab="screenshots">Скриншоты</div>
+                <div class="media-tab" data-tab="videos">Видео</div>
+                <div class="media-tab" data-tab="artwork">Арты</div>
+            </div>
+            
+            <div class="media-content">
+                <div class="media-gallery active" id="screenshots">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="gallery-caption">Лаборатория</div>
+                            <i class="fas fa-microscope gallery-item-icon"></i>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-caption">Зона содержания</div>
+                            <i class="fas fa-biohazard gallery-item-icon"></i>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-caption">Комплекс SCP</div>
+                            <i class="fas fa-radiation gallery-item-icon"></i>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-caption">Центр управления</div>
+                            <i class="fas fa-desktop gallery-item-icon"></i>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-caption">Исследования</div>
+                            <i class="fas fa-flask gallery-item-icon"></i>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-caption">Зона карантина</div>
+                            <i class="fas fa-virus gallery-item-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="zones" class="container">
+            <h2 class="section-title">Зоны комплекса</h2>
+            <div class="zones">
+                <div class="zone-content">
+                    <p class="zone-description">SCP: Secret Facility содержит различные уникальные зоны с разными уровнями опасности. От лабораторий с низким уровнем риска до смертельно опасных зон содержания SCP-объектов.</p>
+                    
+                    <div class="zone-container">
+                        <div class="zone-number">15</div>
+                        <div class="zone-label">Зона 15</div>
+                    </div>
+                    
+                    <p>Одна из наиболее охраняемых зон комплекса, где содержатся особо опасные SCP-объекты. Доступ строго ограничен персоналом с соответствующим уровнем допуска. Попытки несанкционированного доступа пресекаются смертельной силой.</p>
+                    
+                    <div class="zone-warning">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Предупреждение</h4>
+                        <p>Зона 15 содержит объекты класса Кетер и представляет собой зону максимального риска. Все посетители должны следовать протоколам безопасности. В случае нарушения условий содержания активируется процедура "Красный закат".</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="container">
+            <h2 class="section-title">Скачать игру</h2>
+            <div class="download">
+                <div class="download-content">
+                    <p class="download-description">Готовы погрузиться в мир SCP? Скачайте игру прямо сейчас и присоединяйтесь к тысячам игроков по всему миру!</p>
+                    
+                    <div class="download-cta">
+                        <a href="#" class="btn btn-primary download-btn">
+                            <i class="fas fa-download"></i> Скачать для Windows
+                        </a>
+                    </div>
+                    
+                    <div class="download-info">
+                        <div class="download-info-item">
+                            <i class="fas fa-code-branch download-info-icon"></i> Версия: 1.5.2
+                        </div>
+                        <div class="download-info-item">
+                            <i class="fas fa-hdd download-info-icon"></i> Размер: 2.4 GB
+                        </div>
+                        <div class="download-info-item">
+                            <i class="fas fa-exclamation-circle download-info-icon"></i> Рейтинг: 18+
+                        </div>
+                    </div>
+                    
+                    <div class="system-requirements">
+                        <h3>Системные требования</h3>
+                        <div class="requirements-grid">
+                            <div class="requirement-item">
+                                <i class="fas fa-desktop requirement-icon"></i>
+                                <div class="requirement-text">
+                                    <h4>ОС</h4>
+                                    <p>Windows 10 64-bit</p>
+                                </div>
+                            </div>
+                            <div class="requirement-item">
+                                <i class="fas fa-microchip requirement-icon"></i>
+                                <div class="requirement-text">
+                                    <h4>Процессор</h4>
+                                    <p>Intel Core i5-4460 / AMD FX-8350</p>
+                                </div>
+                            </div>
+                            <div class="requirement-item">
+                                <i class="fas fa-memory requirement-icon"></i>
+                                <div class="requirement-text">
+                                    <h4>Оперативная память</h4>
+                                    <p>8 GB ОЗУ</p>
+                                </div>
+                            </div>
+                            <div class="requirement-item">
+                                <i class="fas fa-tv requirement-icon"></i>
+                                <div class="requirement-text">
+                                    <h4>Видеокарта</h4>
+                                    <p>NVIDIA GTX 970 / AMD Radeon R9 390</p>
+                                </div>
+                            </div>
+                            <div class="requirement-item">
+                                <i class="fas fa-database requirement-icon"></i>
+                                <div class="requirement-text">
+                                    <h4>Место на диске</h4>
+                                    <p>10 GB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-waves">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="rgba(230, 57, 70, 0.1)" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,218.7C672,224,768,224,864,197.3C960,171,1056,117,1152,106.7C1248,96,1344,128,1392,144L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="footer-logo">
+                <i class="fas fa-radiation"></i> SCP: <span>Secret Facility</span>
+            </div>
+
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>О проекте</h3>
+                    <p>SCP: Secret Facility - многопользовательская хоррор-игра, основанная на вселенной SCP Foundation. Наш проект стремится создать захватывающий игровой опыт, верный оригинальному духу SCP.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">Об игре</a></li>
+                        <li><a href="#gameplay">Игровой процесс</a></li>
+                        <li><a href="#classes">Классы</a></li>
+                        <li><a href="#media">Медиа</a></li>
+                        <li><a href="#download">Скачать</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Связаться с нами</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Помощь</a></li>
+                        <li><a href="#">Поддержка</a></li>
+                        <li><a href="#">Сообщить о баге</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Социальные сети</h3>
+                    <p>Следите за новостями и обновлениями игры в социальных сетях.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="#" aria-label="Steam"><i class="fab fa-steam"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Reddit"><i class="fab fa-reddit"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 SCP: Secret Facility. Все права защищены. SCP Foundation - под лицензией Creative Commons.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('mousemove', function(e) {
+            const shapes = document.querySelectorAll('.shape');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            shapes.forEach(shape => {
+                const speed = shape.classList.contains('shape-1') ? 20 : 
+                             shape.classList.contains('shape-2') ? -15 : 10;
+                const xOffset = (x - 0.5) * speed;
+                const yOffset = (y - 0.5) * speed;
+                
+                shape.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+        });
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.character-card, .feature-item, .gallery-item, .requirement-item, .gameplay-feature, .ability').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+        
+        // Управление табами для классов
+        document.querySelectorAll('.class-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Удаляем активный класс у всех табов
+                document.querySelectorAll('.class-tab').forEach(t => t.classList.remove('active'));
+                // Добавляем активный класс текущему табу
+                this.classList.add('active');
+                
+                // Получаем класс, который нужно показать
+                const classType = this.getAttribute('data-class');
+                
+                // Скрываем все информационные блоки
+                document.querySelectorAll('.class-info').forEach(info => info.classList.remove('active'));
+                
+                // Показываем нужный информационный блок
+                const infoToShow = document.getElementById(`${classType}-info`);
+                if (infoToShow) {
+                    infoToShow.classList.add('active');
+                }
+            });
+        });
+        
+        // Управление табами для медиа
+        document.querySelectorAll('.media-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Удаляем активный класс у всех табов
+                document.querySelectorAll('.media-tab').forEach(t => t.classList.remove('active'));
+                // Добавляем активный класс текущему табу
+                this.classList.add('active');
+                
+                // Получаем тип медиа, который нужно показать
+                const mediaType = this.getAttribute('data-tab');
+                
+                // Скрываем все галереи
+                document.querySelectorAll('.media-gallery').forEach(gallery => gallery.classList.remove('active'));
+                
+                // Показываем нужную галерею
+                const galleryToShow = document.getElementById(mediaType);
+                if (galleryToShow) {
+                    galleryToShow.classList.add('active');
+                }
+            });
+        });
+        
+        // Обработчик для видео плейсхолдера
+        document.querySelector('.video-placeholder').addEventListener('click', function() {
+            window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+        });
+    </script>
+</body>
+</html> 
