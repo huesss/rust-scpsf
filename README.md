@@ -1,6 +1,6 @@
 # SCP: Secret Facility
 
-![версия](https://img.shields.io/badge/версия-0.1.0-red) ![Rust](https://img.shields.io/badge/Rust-1.70+-orange) ![Rocket](https://img.shields.io/badge/Rocket-0.5.0-blue)
+![версия](https://img.shields.io/badge/версия-0.1.1.1-blue) ![Rust](https://img.shields.io/badge/Rust-1.70+-orange) ![Rocket](https://img.shields.io/badge/Rocket-0.5.0-blue)
 
 Сайт для фанатской хоррор-игры по мотивам SCP. Построен на Rocket (Rust).
 
