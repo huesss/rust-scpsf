@@ -94,4 +94,4 @@ MIT. Делайте что хотите, если упомянете источ�
 
 ---
 
-Вопросы? Нашли баг? Пишите на [tech@scpsfgame.ru](mailto:tech@scpsfgame.ru) или в наш [Discord](https://discord.gg/scpsf). 
+Вопросы? Нашли баг? Пишите на [tech@scpsfgame.ru](mailto:tech@scpsfgame.ru) или в наш [Discord](https://discord.gg/yqzcUgwwK9). 
