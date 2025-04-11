@@ -18,18 +18,18 @@
                 </a>
                 <nav>
                     <ul>
-                        <li><a href="#about">О игре</a></li>
-                        <li><a href="#gameplay">Игровой процесс</a></li>
-                        <li><a href="#classes">Классы</a></li>
-                        <li><a href="#media">Медиа</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i>О игре</a></li>
+                        <li><a href="#gameplay"><i class="fas fa-gamepad"></i>Игровой процесс</a></li>
+                        <li><a href="#classes"><i class="fas fa-users"></i>Классы</a></li>
+                        <li><a href="#media"><i class="fas fa-photo-video"></i>Медиа</a></li>
+                        <li><a href="#zones"><i class="fas fa-map-marked-alt"></i>Зоны</a></li>
+                        <li><a href="#personnel"><i class="fas fa-id-card"></i>Персонал</a></li>
                         <li><a href="#download" class="btn btn-download"><i class="fas fa-download btn-icon"></i>Скачать</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-shapes">
             <div class="shape shape-1"></div>
@@ -53,11 +53,25 @@
             <div class="hero-content">
                 <div class="hero-badge"><i class="fas fa-shield-alt"></i>Высший уровень допуска</div>
                 <h2>Добро пожаловать в мир <span class="text-gradient">аномалий и ужаса</span></h2>
+                <div class="typing-container">
+                    <span class="typing-text">Исследуйте. Наблюдайте. Содержите. Защищайте.</span>
+                </div>
                 <p>SCP: Secret Facility - это многопользовательская игра ужасов, где вам предстоит исследовать тайны фонда SCP, сражаться с опасными аномалиями и выживать вместе с другими игроками в атмосфере постоянного напряжения.</p>
                 
                 <div class="cta-buttons">
                     <a href="#download" class="btn btn-primary"><i class="fas fa-download btn-icon"></i>Скачать игру</a>
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-secondary"><i class="fas fa-play-circle btn-icon"></i>Смотреть трейлер</a>
+                </div>
+                
+                <div class="join-now-container">
+                    <a href="#download" class="btn btn-join-now">
+                        <i class="fas fa-bolt btn-icon"></i>Присоединиться сейчас
+                        <span class="pulse-effect"></span>
+                    </a>
+                    <div class="online-indicator">
+                        <span class="online-dot"></span>
+                        <span class="online-count">2,541</span> игроков онлайн
+                    </div>
                 </div>
                 
                 <div class="hero-stats">
@@ -175,9 +189,9 @@
             <h2 class="section-title">Классы</h2>
             <div class="classes-container">
                 <div class="class-tabs">
-                    <div class="class-tab active" data-class="human">Люди</div>
-                    <div class="class-tab" data-class="scp">SCP объекты</div>
-                    <div class="class-tab" data-class="mtf">Оперативники</div>
+                    <div class="class-tab active" data-class="human"><i class="fas fa-user"></i> Люди</div>
+                    <div class="class-tab" data-class="scp"><i class="fas fa-biohazard"></i> SCP объекты</div>
+                    <div class="class-tab" data-class="mtf"><i class="fas fa-shield-alt"></i> Оперативники</div>
                 </div>
                 
                 <div class="class-info active" id="human-info">
@@ -315,12 +329,427 @@
                         <p>Зона 15 содержит объекты класса Кетер и представляет собой зону максимального риска. Все посетители должны следовать протоколам безопасности. В случае нарушения условий содержания активируется процедура "Красный закат".</p>
                     </div>
                 </div>
+                
+                <div class="facility-map">
+                    <div class="map-title">Интерактивная карта комплекса</div>
+                    <div class="map-container">
+                        <div class="map-zone map-zone-1" data-zone="Лаборатория" data-id="lab">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="map-zone map-zone-2" data-zone="Зона содержания" data-id="containment">
+                            <i class="fas fa-biohazard"></i>
+                        </div>
+                        <div class="map-zone map-zone-3" data-zone="Контрольный центр" data-id="control">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="map-zone map-zone-4" data-zone="Жилая зона" data-id="living">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div class="map-zone map-zone-5" data-zone="Зона 15" data-id="zone15">
+                            <i class="fas fa-radiation"></i>
+                        </div>
+                        <div class="map-connections"></div>
+                        <div class="map-path"></div>
+                    </div>
+                    <div class="map-info-display">
+                        <div class="map-info-content">
+                            <div class="map-info-header">
+                                <i class="fas fa-info-circle"></i> Выберите зону для получения информации
+                            </div>
+                            <div class="map-info-body">
+                                <div class="map-info-panel" data-id="lab">
+                                    <h4>Лаборатория</h4>
+                                    <p>Лаборатория является центром научных исследований комплекса. Здесь проводятся эксперименты над SCP-объектами и разрабатываются новые методы их содержания.</p>
+                                    <div class="map-info-stats">
+                                        <div class="map-stat"><i class="fas fa-user-shield"></i> Уровень допуска: 3</div>
+                                        <div class="map-stat"><i class="fas fa-skull-crossbones"></i> Опасность: Средняя</div>
+                                    </div>
+                                    <button class="map-action-btn" data-action="scan" data-zone="lab">Сканировать активность</button>
+                                </div>
+                                <div class="map-info-panel" data-id="containment">
+                                    <h4>Зона содержания</h4>
+                                    <p>Зона содержания предназначена для безопасного хранения SCP-объектов класса Безопасный и Евклид. Усиленная система безопасности и постоянный мониторинг.</p>
+                                    <div class="map-info-stats">
+                                        <div class="map-stat"><i class="fas fa-user-shield"></i> Уровень допуска: 4</div>
+                                        <div class="map-stat"><i class="fas fa-skull-crossbones"></i> Опасность: Высокая</div>
+                                    </div>
+                                    <button class="map-action-btn" data-action="lockdown" data-zone="containment">Активировать карантин</button>
+                                </div>
+                                <div class="map-info-panel" data-id="control">
+                                    <h4>Контрольный центр</h4>
+                                    <p>Сердце комплекса, откуда осуществляется управление всеми системами безопасности, наблюдение за SCP-объектами и координация действий персонала.</p>
+                                    <div class="map-info-stats">
+                                        <div class="map-stat"><i class="fas fa-user-shield"></i> Уровень допуска: 4</div>
+                                        <div class="map-stat"><i class="fas fa-skull-crossbones"></i> Опасность: Низкая</div>
+                                    </div>
+                                    <button class="map-action-btn" data-action="alert" data-zone="control">Объявить тревогу</button>
+                                </div>
+                                <div class="map-info-panel" data-id="living">
+                                    <h4>Жилая зона</h4>
+                                    <p>Зона для проживания персонала комплекса. Включает спальные помещения, столовую, медицинский центр и рекреационные зоны для сотрудников.</p>
+                                    <div class="map-info-stats">
+                                        <div class="map-stat"><i class="fas fa-user-shield"></i> Уровень допуска: 2</div>
+                                        <div class="map-stat"><i class="fas fa-skull-crossbones"></i> Опасность: Минимальная</div>
+                                    </div>
+                                    <button class="map-action-btn" data-action="supply" data-zone="living">Запросить снабжение</button>
+                                </div>
+                                <div class="map-info-panel" data-id="zone15">
+                                    <h4>Зона 15</h4>
+                                    <p>Особо охраняемая зона для содержания SCP-объектов класса Кетер. Входит допускается только персоналу с высшим уровнем доступа и только в экстренных ситуациях.</p>
+                                    <div class="map-info-stats">
+                                        <div class="map-stat"><i class="fas fa-user-shield"></i> Уровень допуска: 5</div>
+                                        <div class="map-stat"><i class="fas fa-skull-crossbones"></i> Опасность: Чрезвычайная</div>
+                                    </div>
+                                    <button class="map-action-btn emergency-btn" data-action="containment-breach" data-zone="zone15">НАРУШЕНИЕ СОДЕРЖАНИЯ</button>
+                                </div>
+                            </div>
+                            <div class="map-status">
+                                <div class="status-container">
+                                    <span class="status-indicator"><i class="fas fa-circle"></i></span>
+                                    <span class="status-text">Статус комплекса: Нормальный</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="personnel" class="container">
+            <h2 class="section-title">Персонал комплекса</h2>
+            <div class="personnel-header-badges">
+                <div class="personnel-badge">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Допуск</span>
+                </div>
+                <div class="personnel-badge">
+                    <i class="fas fa-fingerprint"></i>
+                    <span>Идентификация</span>
+                </div>
+                <div class="personnel-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Безопасность</span>
+                </div>
+                <div class="personnel-badge">
+                    <i class="fas fa-radiation"></i>
+                    <span>Опасность</span>
+                </div>
+            </div>
+            <div class="personnel-container">
+                <div class="personnel-intro">
+                    <p>Фонд SCP нанимает лучших специалистов в различных научных и военных областях. Каждая должность имеет свой уровень допуска и обязанности. Познакомьтесь с ключевыми должностями в нашем комплексе.</p>
+                </div>
+                
+                <div class="personnel-grid">
+                    <div class="personnel-card">
+                        <div class="personnel-header">
+                            <div class="personnel-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <div class="personnel-title">
+                                <h3>Научный персонал</h3>
+                                <div class="clearance-badge">Допуск: <span>3-5</span></div>
+                            </div>
+                        </div>
+                        <div class="personnel-content">
+                            <p>Исследователи и ученые, непосредственно изучающие аномалии и SCP-объекты. Проводят эксперименты, разрабатывают методы содержания и документируют свойства объектов.</p>
+                        </div>
+                        <div class="personnel-stats">
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-brain"></i> Интеллект</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-heartbeat"></i> Выживаемость</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-star"></i> Влияние</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="personnel-card">
+                        <div class="personnel-header">
+                            <div class="personnel-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div class="personnel-title">
+                                <h3>Служба безопасности</h3>
+                                <div class="clearance-badge">Допуск: <span>2-4</span></div>
+                            </div>
+                        </div>
+                        <div class="personnel-content">
+                            <p>Охранники и специалисты по безопасности, отвечающие за защиту персонала и предотвращение нарушений условий содержания. Обучены обращению с большинством типов SCP-объектов.</p>
+                        </div>
+                        <div class="personnel-stats">
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-brain"></i> Интеллект</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-heartbeat"></i> Выживаемость</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-star"></i> Влияние</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="personnel-card">
+                        <div class="personnel-header">
+                            <div class="personnel-icon">
+                                <i class="fas fa-radiation"></i>
+                            </div>
+                            <div class="personnel-title">
+                                <h3>МОГ "Альфа-1"</h3>
+                                <div class="clearance-badge elite">Допуск: <span>5</span></div>
+                            </div>
+                        </div>
+                        <div class="personnel-content">
+                            <p>Элитное подразделение "Красная Десница" — личный оперативный отряд Совета O5. Состоит из лучших бойцов с доступом к экспериментальным технологиям и специальной подготовкой.</p>
+                        </div>
+                        <div class="personnel-stats">
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-brain"></i> Интеллект</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-heartbeat"></i> Выживаемость</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-star"></i> Влияние</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="personnel-card">
+                        <div class="personnel-header">
+                            <div class="personnel-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <div class="personnel-title">
+                                <h3>Административный персонал</h3>
+                                <div class="clearance-badge">Допуск: <span>2-3</span></div>
+                            </div>
+                        </div>
+                        <div class="personnel-content">
+                            <p>Административные работники, обеспечивающие бесперебойное функционирование объекта. Управляют документацией, логистикой, коммуникациями и другими аспектами повседневной работы.</p>
+                        </div>
+                        <div class="personnel-stats">
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-brain"></i> Интеллект</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-heartbeat"></i> Выживаемость</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-star"></i> Влияние</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="personnel-card">
+                        <div class="personnel-header">
+                            <div class="personnel-icon">
+                                <i class="fas fa-briefcase-medical"></i>
+                            </div>
+                            <div class="personnel-title">
+                                <h3>Медицинский персонал</h3>
+                                <div class="clearance-badge">Допуск: <span>3</span></div>
+                            </div>
+                        </div>
+                        <div class="personnel-content">
+                            <p>Врачи и медсестры, обеспечивающие медицинскую помощь сотрудникам и изучающие биологические аспекты SCP-объектов. Обучены работе с необычными ранениями и мутациями.</p>
+                        </div>
+                        <div class="personnel-stats">
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-brain"></i> Интеллект</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-heartbeat"></i> Выживаемость</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-star"></i> Влияние</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="personnel-card">
+                        <div class="personnel-header">
+                            <div class="personnel-icon">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <div class="personnel-title">
+                                <h3>Технический персонал</h3>
+                                <div class="clearance-badge">Допуск: <span>2</span></div>
+                            </div>
+                        </div>
+                        <div class="personnel-content">
+                            <p>Инженеры и техники, отвечающие за функционирование оборудования, систем безопасности и инфраструктуры объекта. Имеют доступ ко многим частям комплекса.</p>
+                        </div>
+                        <div class="personnel-stats">
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-brain"></i> Интеллект</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-heartbeat"></i> Выживаемость</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-name"><i class="fas fa-star"></i> Влияние</div>
+                                <div class="stat-value">
+                                    <span class="stat-point active"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                    <span class="stat-point"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="personnel-notice">
+                    <div class="notice-icon"><i class="fas fa-exclamation-circle pulse-icon"></i></div>
+                    <div class="notice-content">
+                        <h4><i class="fas fa-lock security-icon"></i> Важное уведомление</h4>
+                        <p>Все сотрудники комплекса обязаны проходить ежемесячную проверку на подверженность аномальным воздействиям. Любые изменения в поведении или физиологии необходимо <span class="highlight-text">немедленно сообщать</span> в отдел медицинского контроля.</p>
+                        <div class="notice-badges">
+                            <span class="notice-badge"><i class="fas fa-calendar-check"></i> Ежемесячно</span>
+                            <span class="notice-badge"><i class="fas fa-clipboard-check"></i> Обязательно</span>
+                            <span class="notice-badge"><i class="fas fa-user-shield"></i> Безопасность</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="download" class="container">
             <h2 class="section-title">Скачать игру</h2>
             <div class="download">
+                <div class="download-particles">
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                </div>
+                
                 <div class="download-content">
                     <p class="download-description">Готовы погрузиться в мир SCP? Скачайте игру прямо сейчас и присоединяйтесь к тысячам игроков по всему миру!</p>
                     
@@ -332,13 +761,13 @@
                     
                     <div class="download-info">
                         <div class="download-info-item">
-                            <i class="fas fa-code-branch download-info-icon"></i> Версия: 1.5.2
+                            <i class="fas fa-code-branch download-info-icon"></i> Версия: <span class="highlight">1.5.2</span>
                         </div>
                         <div class="download-info-item">
-                            <i class="fas fa-hdd download-info-icon"></i> Размер: 2.4 GB
+                            <i class="fas fa-hdd download-info-icon"></i> Размер: <span class="highlight">2.4 GB</span>
                         </div>
                         <div class="download-info-item">
-                            <i class="fas fa-exclamation-circle download-info-icon"></i> Рейтинг: 18+
+                            <i class="fas fa-exclamation-circle download-info-icon"></i> Рейтинг: <span class="highlight">18+</span>
                         </div>
                     </div>
                     
@@ -412,6 +841,8 @@
                         <li><a href="#gameplay">Игровой процесс</a></li>
                         <li><a href="#classes">Классы</a></li>
                         <li><a href="#media">Медиа</a></li>
+                        <li><a href="#zones">Зоны</a></li>
+                        <li><a href="#personnel">Персонал</a></li>
                         <li><a href="#download">Скачать</a></li>
                     </ul>
                 </div>
@@ -489,26 +920,20 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.character-card, .feature-item, .gallery-item, .requirement-item, .gameplay-feature, .ability').forEach(el => {
+        document.querySelectorAll('.character-card, .feature-item, .gallery-item, .requirement-item, .gameplay-feature, .ability, .map-zone').forEach(el => {
             el.classList.add('fade-in');
             observer.observe(el);
         });
         
-        // Управление табами для классов
         document.querySelectorAll('.class-tab').forEach(tab => {
             tab.addEventListener('click', function() {
-                // Удаляем активный класс у всех табов
                 document.querySelectorAll('.class-tab').forEach(t => t.classList.remove('active'));
-                // Добавляем активный класс текущему табу
                 this.classList.add('active');
                 
-                // Получаем класс, который нужно показать
                 const classType = this.getAttribute('data-class');
                 
-                // Скрываем все информационные блоки
                 document.querySelectorAll('.class-info').forEach(info => info.classList.remove('active'));
                 
-                // Показываем нужный информационный блок
                 const infoToShow = document.getElementById(`${classType}-info`);
                 if (infoToShow) {
                     infoToShow.classList.add('active');
@@ -516,21 +941,15 @@
             });
         });
         
-        // Управление табами для медиа
         document.querySelectorAll('.media-tab').forEach(tab => {
             tab.addEventListener('click', function() {
-                // Удаляем активный класс у всех табов
                 document.querySelectorAll('.media-tab').forEach(t => t.classList.remove('active'));
-                // Добавляем активный класс текущему табу
                 this.classList.add('active');
                 
-                // Получаем тип медиа, который нужно показать
                 const mediaType = this.getAttribute('data-tab');
                 
-                // Скрываем все галереи
                 document.querySelectorAll('.media-gallery').forEach(gallery => gallery.classList.remove('active'));
                 
-                // Показываем нужную галерею
                 const galleryToShow = document.getElementById(mediaType);
                 if (galleryToShow) {
                     galleryToShow.classList.add('active');
@@ -538,9 +957,228 @@
             });
         });
         
-        // Обработчик для видео плейсхолдера
         document.querySelector('.video-placeholder').addEventListener('click', function() {
             window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const mapZones = document.querySelectorAll('.map-zone');
+            const mapInfoPanels = document.querySelectorAll('.map-info-panel');
+            const mapContainer = document.querySelector('.map-container');
+            const statusIndicator = document.querySelector('.status-indicator');
+            const statusText = document.querySelector('.status-text');
+            function loadFacilityState() {
+                const savedState = localStorage.getItem('facilityState');
+                if (savedState) {
+                    const state = JSON.parse(savedState);
+                    if (state.status) {
+                        statusText.textContent = state.status;
+                    }
+                    if (state.indicatorClass) {
+                        statusIndicator.className = state.indicatorClass;
+                    }
+                    if (state.containerClasses) {
+                        state.containerClasses.forEach(className => {
+                            if (className && className !== '') {
+                                mapContainer.classList.add(className);
+                            }
+                        });
+                    }
+                    if (state.activeZoneId) {
+                        const zoneToActivate = document.querySelector(`.map-zone[data-id="${state.activeZoneId}"]`);
+                        if (zoneToActivate) {
+                            setTimeout(() => {
+                                zoneToActivate.click();
+                            }, 100);
+                        }
+                    }
+                } else {
+                    if (mapZones.length > 0) {
+                        mapZones[0].click();
+                    }
+                }
+            }
+            function saveFacilityState() {
+                const activeZone = document.querySelector('.map-zone.active');
+                const activeZoneId = activeZone ? activeZone.getAttribute('data-id') : null;
+                
+                const containerClasses = [];
+                if (mapContainer.classList.contains('alert')) containerClasses.push('alert');
+                if (mapContainer.classList.contains('lockdown')) containerClasses.push('lockdown');
+                
+                const state = {
+                    status: statusText.textContent,
+                    indicatorClass: statusIndicator.className,
+                    containerClasses: containerClasses,
+                    activeZoneId: activeZoneId
+                };
+                
+                localStorage.setItem('facilityState', JSON.stringify(state));
+            }
+            
+            const mapPathElement = document.querySelector('.map-path');
+            const svgNS = "http://www.w3.org/2000/svg";
+            const svg = document.createElementNS(svgNS, "svg");
+            svg.setAttribute("width", "100%");
+            svg.setAttribute("height", "100%");
+            mapPathElement.appendChild(svg);
+            
+            const connections = [
+                { from: 'lab', to: 'containment' },
+                { from: 'lab', to: 'control' },
+                { from: 'containment', to: 'zone15' },
+                { from: 'control', to: 'living' },
+                { from: 'control', to: 'containment' }
+            ];
+            
+            function createPaths() {
+                while (svg.firstChild) {
+                    svg.removeChild(svg.firstChild);
+                }
+                
+                connections.forEach(connection => {
+                    const fromZone = document.querySelector(`.map-zone[data-id="${connection.from}"]`);
+                    const toZone = document.querySelector(`.map-zone[data-id="${connection.to}"]`);
+                    
+                    if (fromZone && toZone) {
+                        const fromRect = fromZone.getBoundingClientRect();
+                        const toRect = toZone.getBoundingClientRect();
+                        const containerRect = mapContainer.getBoundingClientRect();
+                        
+                        const fromX = fromRect.left + (fromRect.width / 2) - containerRect.left;
+                        const fromY = fromRect.top + (fromRect.height / 2) - containerRect.top;
+                        const toX = toRect.left + (toRect.width / 2) - containerRect.left;
+                        const toY = toRect.top + (toRect.height / 2) - containerRect.top;
+                        
+                        const path = document.createElementNS(svgNS, "path");
+                        path.setAttribute("d", `M${fromX},${fromY} L${toX},${toY}`);
+                        path.setAttribute("stroke", "rgba(255, 255, 255, 0.1)");
+                        path.setAttribute("stroke-width", "2");
+                        path.setAttribute("data-from", connection.from);
+                        path.setAttribute("data-to", connection.to);
+                        path.setAttribute("fill", "none");
+                        path.setAttribute("stroke-dasharray", "5,5");
+                        svg.appendChild(path);
+                    }
+                });
+            }
+            
+            window.addEventListener('load', createPaths);
+            window.addEventListener('resize', createPaths);
+            
+            mapZones.forEach(zone => {
+                zone.addEventListener('click', function() {
+                    const zoneId = this.getAttribute('data-id');
+                    
+                    mapZones.forEach(z => z.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    mapInfoPanels.forEach(panel => {
+                        if (panel.getAttribute('data-id') === zoneId) {
+                            panel.classList.add('active');
+                        } else {
+                            panel.classList.remove('active');
+                        }
+                    });
+                    
+                    const paths = svg.querySelectorAll('path');
+                    paths.forEach(path => {
+                        const fromId = path.getAttribute('data-from');
+                        const toId = path.getAttribute('data-to');
+                        
+                        if (fromId === zoneId || toId === zoneId) {
+                            path.setAttribute("stroke", "var(--primary-color)");
+                            path.setAttribute("stroke-width", "3");
+                            path.setAttribute("stroke-dasharray", "10,5");
+                            path.setAttribute("class", "active");
+                        } else {
+                            path.setAttribute("stroke", "rgba(255, 255, 255, 0.1)");
+                            path.setAttribute("stroke-width", "2");
+                            path.setAttribute("stroke-dasharray", "5,5");
+                            path.setAttribute("class", "");
+                        }
+                    });
+                    
+                    
+                    saveFacilityState();
+                });
+            });
+            
+            document.querySelectorAll('.map-action-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const action = this.getAttribute('data-action');
+                    const zone = this.getAttribute('data-zone');
+                    
+                    switch(action) {
+                        case 'lockdown':
+                            mapContainer.classList.add('lockdown');
+                            statusIndicator.className = 'status-indicator warning';
+                            statusText.textContent = 'Статус комплекса: Карантин активирован';
+                            break;
+                            
+                        case 'alert':
+                            mapContainer.classList.add('alert');
+                            statusIndicator.className = 'status-indicator alert';
+                            statusText.textContent = 'Статус комплекса: Тревога';
+                            break;
+                            
+                        case 'scan':
+                            const labZone = document.querySelector('.map-zone[data-id="lab"]');
+                            labZone.style.boxShadow = '0 0 30px var(--accent-color)';
+                            setTimeout(() => {
+                                labZone.style.boxShadow = '';
+                                statusText.textContent = 'Статус комплекса: Сканирование завершено';
+                                setTimeout(() => {
+                                    statusText.textContent = 'Статус комплекса: Нормальный';
+                                }, 3000);
+                            }, 2000);
+                            break;
+                            
+                        case 'supply':
+                            statusText.textContent = 'Статус комплекса: Запрос снабжения отправлен';
+                            setTimeout(() => {
+                                statusText.textContent = 'Статус комплекса: Нормальный';
+                            }, 3000);
+                            break;
+                            
+                        case 'containment-breach':
+                            mapContainer.classList.add('alert');
+                            statusIndicator.className = 'status-indicator alert';
+                            statusText.textContent = 'ВНИМАНИЕ: НАРУШЕНИЕ УСЛОВИЙ СОДЕРЖАНИЯ';
+                            
+                            mapZones.forEach(z => {
+                                z.style.animation = 'pulse 0.5s infinite';
+                            });
+                            
+                            setTimeout(() => {
+                                mapContainer.classList.remove('alert');
+                                statusIndicator.className = 'status-indicator';
+                                statusText.textContent = 'Статус комплекса: Нормальный';
+                                mapZones.forEach(z => {
+                                    z.style.animation = '';
+                                });
+                                document.querySelector('.map-zone-5').style.animation = 'pulse 2s infinite';
+                            }, 5000);
+                            break;
+                    }
+                    
+                    saveFacilityState();
+                    
+                    if (action !== 'containment-breach') {
+                        setTimeout(() => {
+                            mapContainer.classList.remove('lockdown', 'alert');
+                            statusIndicator.className = 'status-indicator';
+                            if (statusText.textContent.includes('Карантин') || 
+                                statusText.textContent.includes('Тревога')) {
+                                statusText.textContent = 'Статус комплекса: Нормальный';
+                            }
+                            
+                            saveFacilityState();
+                        }, 3000);
+                    }
+                });
+            });
+            loadFacilityState();
         });
     </script>
 </body>
